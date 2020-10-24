@@ -103,13 +103,26 @@ h4 {
 }
 
 .CenterContent {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 50%;
+}
+
+label {
     width: 100%;
-    max-width: 550px;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    position:relative;
+}
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--white1);
+    border-width: 0px;
+}
+
+button {
+    sha
 }
