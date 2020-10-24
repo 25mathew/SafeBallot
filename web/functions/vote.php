@@ -6,7 +6,7 @@
 		$row = $result->fetch_array();
 		if($result->num_rows > 0 && password_verify($_POST['password'],$row['password'])){
 			$_SESSION['loggedin'] = "true";
-			exit(header('Location: index.php'));
+			exit(header('Location: ballot.php'));
 		}
 		else{
 			//invalid combination
