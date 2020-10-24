@@ -1,7 +1,16 @@
 <?php
 	require_once 'sql.php';
-	if(isset($_POST['username']) && isset($_POST['password'])){ //username and password 
-		echo "<h1>yay</h1>";
-		
+	if(isset($_POST['username']) && isset($_POST['password'])){
+		//$_SESSION['username'] = strtolower(stringClean($_POST['username']));
+		$result = queryHandler("SELECT * FROM auth WHERE webcode='" . password_hash($_POST['username'],PASSWORD_DEFAULT) . "'");
+		$row = $result->fetch_array();
+		if($result->num_rows > 0 && password_verify($_POST['password'],$row['password'])){
+			$_SESSION['loggedin'] = "true";
+			exit(header('Location: index.php'));
+		}
+		else{
+			//invalid combination
+			//implement later
+		}
 	}
 ?>
