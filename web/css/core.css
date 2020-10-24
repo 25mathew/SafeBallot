@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --blue: #30A1ED;
+    --red: #EA4235;
+    --black: #000000;
+    --white1: #f8f8f8;
+    --white2: #ffffff;
+    --verticalPadding: 1vh;
+    --horizontalPadding: 1vw;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    align-content: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
+}
+
+h4 {
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+}
+
+.panel {
+    height: 100vh;
+}
+
+#leftPanel {
+    padding-top: var(--verticalPadding);
+    padding-bottom: var(--verticalPadding);
+    padding-left: var(--horizontalPadding);
+    padding-right: var(--horizontalPadding);
+
+    background-color: var(--blue);
+    width: 30vw;
+}
+
+#contentPanel {
+    padding-top: var(--verticalPadding);
+    padding-bottom: var(--verticalPadding);
+    padding-left: var(--horizontalPadding);
+    padding-right: var(--horizontalPadding);
+
+    background-color: var(--white1);
+    width: 67vw;
+}
+
+#rightPanel {
+    padding-top: var(--verticalPadding);
+    padding-bottom: var(--verticalPadding);
+    padding-left: var(--horizontalPadding);
+    padding-right: var(--horizontalPadding);
+
+    background-color: var(--red);
+    width: 3vw;
+}
+
+#tinput {
+    border: 2px solid var(--black);
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+
+#centerPanel {
+    min-height: 25vh;
+    min-width: 35vw;
+}
+
+.verticalContent {
+    display:block;
+    align-content:center;
+}
+
+.leftPanelH1{
+    color: var(--white2);
+}
+
+.leftPanelH4 {
+    color: var(--white2);
+}
+
+.contentPanelH1 {
+    color: var(--black);
+}
+
+.contentPanelH4 {
+    color: var(--black);
+}
+
+.CenterContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+}
