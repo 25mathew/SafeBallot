@@ -9,8 +9,7 @@
 			exit(header('Location: ballot.php'));
 		}
 		else{
-			//invalid combination
-			//implement later
+			echo "nope";
 		}
 	}
 ?>
