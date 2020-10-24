@@ -1,23 +1,85 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
-     <link rel="stylesheet" href="css/core.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+        <link rel="stylesheet" href="css/core.css" />
+        <title>Covid Info Page</title>
     </head>
-
     <body>
         <div class="panel" id="leftPanel">
-            <h4 class="leftPanelH4">SafeBallot</h4>
-            <h1 class:"contentPanelH1">covidInfo</h1>
+            <a href="index.html"><h4 class="leftPanelH4">SafeBallot</h4></a>
+            <h1 class="leftPanelH1">Covid-19 Safety & Voting</h1>
+
         </div>
 
         <div class="panel" id="contentPanel">
+            <div class="blogHeader">
 
+                <p style="text-align:right">Register by October 31st</p>
+                <p id="countdown">Loading Countdown</p>
+
+                <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Nov 3, 2020 17:00:00").getTime(); //5 o'clock election day
+
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+
+                  // Get today's date and time
+                  var now = new Date().getTime();
+    
+                  // Find the distance between now and the count down date
+                  var distance = countDownDate - now;
+    
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                  // Output the result in an element with id="demo"
+                  document.getElementById("countdown").innerHTML = "Voting closes in " + days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+    
+                  // If the count down is over, write some text 
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Voting Closed";
+                  }
+                }, 1000);
+                </script>
+
+
+                <h2 class="contentPanelH1">Voting Safely During Covid</h2>
+                
+            </div>
+            <article>
+                <h3>1 </h3>
+                <p>When voting online there are a few steps that need to be taken to ensure that 
+                you can vote from the comfort of your home. The first step is to register to vote online. 
+                This is similar to how you register to vote in person. Information such as your social security number, 
+                driver license, and birth certificate will be used during registration. Be sure to find these 
+                before beginning registration. </p>
+                
+                <h3>2 </h3>
+                <p>After registering, you will receive your username and later your password. The username will be given 
+                by the site right after your registration form has been accepted. DO NOT LOSE YOUR USERNAME. This is the 
+                only time that the username will appear so it can not be lost or else you can not vote online with us. </p>
+                
+                <h3>3 </h3>
+                <p>The password will be sent to you through the Postal Service within 24 hours of registering. If the password 
+                does not arrive, another one can be requested using your username and social security number. Once you have the 
+                password you can now login to our voting page. Go to the voting page and sign in using the username and password.</p>
+                
+                <h3>4 </h3>
+                <p>Once you are logged in, you may now select the candidates you would like to vote for. The options on the ballot are 
+                identical to those on the physical ballot. After you have finished your ballot, submit it at the bottom of the page. 
+                A confirmation will show that your vote was received. Thank you for voting!</p>
+            </article>
         </div>
 
         <div class="panel" id="rightPanel">
 
         </div>
     </body>
-
 </html>

@@ -14,10 +14,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
 }
 
 body {
-    background-color: var(--white);
+    background-color: var(--white1);
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
@@ -33,11 +34,13 @@ body {
 
 h1 {
     font-weight: 700;
+    font-size: 3vw;
     font-family: Montserrat, sans-serif;
 }
 
 h4 {
     font-weight: 500;
+    font-size: 2vw;
     font-family: Montserrat, sans-serif;
 }
 
@@ -50,9 +53,8 @@ h4 {
     padding-bottom: var(--verticalPadding);
     padding-left: var(--horizontalPadding);
     padding-right: var(--horizontalPadding);
-
     background-color: var(--blue);
-    width: 30vw;
+    width: 27vw;
 }
 
 #contentPanel {
@@ -62,7 +64,7 @@ h4 {
     padding-right: var(--horizontalPadding);
 
     background-color: var(--white1);
-    width: 67vw;
+    width: 68vw;
 }
 
 #rightPanel {
@@ -70,9 +72,8 @@ h4 {
     padding-bottom: var(--verticalPadding);
     padding-left: var(--horizontalPadding);
     padding-right: var(--horizontalPadding);
-
     background-color: var(--red);
-    width: 3vw;
+    width: 5vw;
 }
 
 #tinput {
@@ -82,7 +83,7 @@ h4 {
 }
 
 
-#centerPanel {
+#depricatedCenterPanel {
     min-height: 25vh;
     min-width: 35vw;
 }
@@ -130,7 +131,7 @@ form {
 }
 
 .blogHeader {
-    min-height: 25vh;
+    min-height: 15vh;
     min-width: 100%;
     
     align-content: end;
@@ -143,7 +144,6 @@ form {
 }
 
 article {
-    overflow-y: scroll;
     padding: 2em;
     position: relative;
 }
