@@ -23,7 +23,13 @@ body {
     overflow-x: hidden;
     display: flex;
     align-content: center;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
 
 h1 {
     font-weight: 700;
@@ -123,6 +129,21 @@ form {
     border-width: 0px;
 }
 
-button {
-    sha
+.blogHeader {
+    min-height: 25vh;
+    min-width: 100%;
+    
+    align-content: end;
+}
+
+#countdown {
+    
+    text-align: right;
+    font-weight: 700;
+}
+
+article {
+    overflow-y: scroll;
+    padding: 2em;
+    position: relative;
 }
