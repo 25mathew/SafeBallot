@@ -9,7 +9,7 @@
 			$webcode = uniqueCodeHandler("webcode");
 			$mailcode = uniqueCodeHandler("mailcode");
 			$result = queryHandler("INSERT INTO pii (ssn,dln) VALUES ('" . password_hash($SSN,PASSWORD_DEFAULT) . "','" . password_hash($DLN,PASSWORD_DEFAULT) . "')");
-			$result = queryHandler("INSERT INTO ballot DEFAULT VALUES");
+			$result = queryHandler("INSERT INTO ballot (voted) VALUES ('false')");
 			$result = queryHandler("INSERT INTO auth (webcode,mailcode) VALUES ('" . password_hash($webcode,PASSWORD_DEFAULT) . "','" . password_hash($mailcode,PASSWORD_DEFAULT) . "')");
 			
 			
