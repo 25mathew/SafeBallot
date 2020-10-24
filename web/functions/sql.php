@@ -11,5 +11,14 @@
         session_regenerate_id(true);
         return mysqli_query(establishSQL(),$statement);
     }
-
+	function dualHashedQueryHandler($inputOne,$inputTwo,$fieldOne,$fieldTwo,$statement){
+		$result = queryHandler($statement);
+		while($row = $result->fetch_array()){
+			if(password_verify($inputOne,$row[$fieldOne]) && password_verify($inputTwo,$row[$fieldTwo])){
+				return true;
+			}
+		}
+		return false;
+	}
+//if(password_verify($_POST['password'],$row['password'])){
  ?>
