@@ -3,15 +3,99 @@
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
         <link rel="stylesheet" href="css/core.css" />
+        <title>How To Vote Online</title>
     </head>
     <body>
         <div class="panel" id="leftPanel">
             <h4 class="leftPanelH4">SafeBallot</h4>
-            <h1 class:"contentPanelH1">HowTo</h1>
+            <h1 class="leftPanelH1">How To Vote Online</h1>
         </div>
 
         <div class="panel" id="contentPanel">
+            <div class="blogHeader">
 
+                <p style="text-align:right">Register by October 31st</p>
+                <p id="countdown"></p>
+
+                <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Nov 3, 2020 17:00:00").getTime(); //5 o'clock election day
+
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+
+                  // Get today's date and time
+                  var now = new Date().getTime();
+    
+                  // Find the distance between now and the count down date
+                  var distance = countDownDate - now;
+    
+                  // Time calculations for days, hours, minutes and seconds
+                  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                  // Output the result in an element with id="demo"
+                  document.getElementById("countdown").innerHTML = "Voting closes in " + days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+    
+                  // If the count down is over, write some text 
+                  if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("countdown").innerHTML = "Voting Closed";
+                  }
+                }, 1000);
+                </script>
+
+
+                <h1 class="contentPanelH1">Voting Online</h1>
+
+
+            </div>
+            
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                et dolore magna aliqua. Orci dapibus ultrices in iaculis. Semper auctor neque vitae tempus quam pellentesque 
+                nec. Nibh venenatis cras sed felis eget velit aliquet. Eu non diam phasellus vestibulum lorem sed risus. 
+                Nec ultrices dui sapien eget mi. Dignissim enim sit amet venenatis urna cursus eget nunc. Egestas tellus 
+                rutrum tellus pellentesque eu tincidunt. Scelerisque mauris pellentesque pulvinar pellentesque habitant 
+                morbi tristique. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Ullamcorper 
+                malesuada proin libero nunc. Scelerisque purus semper eget duis at tellus at. Morbi tristique senectus 
+                et netus. Commodo sed egestas egestas fringilla. Viverra vitae congue eu consequat ac felis donec. V
+                itae purus faucibus ornare suspendisse sed nisi. Accumsan lacus vel facilisis volutpat est velit egestas dui.</p>
+            
+                <p> Quis varius quam quisque id diam vel. Euismod nisi porta lorem mollis aliquam ut porttitor. Dictum non consectetur 
+                a erat nam at lectus urna. Nisl pretium fusce id velit ut tortor pretium. A cras semper auctor neque vitae tempus 
+                quam. Nec feugiat nisl pretium fusce id velit ut tortor pretium. Dui id ornare arcu odio ut sem nulla. 
+                Quis commodo odio aenean sed adipiscing diam donec adipiscing. Non curabitur gravida arcu ac tortor. 
+                A pellentesque sit amet porttitor eget dolor. Pretium fusce id velit ut tortor pretium. Dictum varius 
+                duis at consectetur lorem donec.</p>
+
+                <p>Erat imperdiet sed euismod nisi porta. In hendrerit gravida rutrum quisque non. Amet est placerat 
+                in egestas erat imperdiet sed euismod nisi. Et ultrices neque ornare aenean euismod elementum. Varius 
+                sit amet mattis vulputate enim. Vulputate enim nulla aliquet porttitor lacus luctus accumsan. Aliquam 
+                vestibulum morbi blandit cursus. Velit laoreet id donec ultrices tincidunt arcu. Sit amet nisl purus 
+                in. Varius quam quisque id diam vel quam elementum pulvinar. Orci eu lobortis elementum nibh. 
+                Vulputate sapien nec sagittis aliquam malesuada bibendum. Morbi non arcu risus quis varius quam 
+                quisque. Eu sem integer vitae justo. Facilisis leo vel fringilla est ullamcorper. Sem integer vitae 
+                justo eget. Potenti nullam ac tortor vitae purus faucibus ornare.</p>
+            
+                <p>Sit amet dictum sit amet justo donec. Ultrices gravida dictum fusce ut placerat orci nulla 
+                pellentesque dignissim. Quis viverra nibh cras pulvinar mattis. Sed adipiscing diam donec 
+                adipiscing tristique risus nec. Tellus orci ac auctor augue mauris augue neque gravida in. Sit 
+                amet nisl suscipit adipiscing. Integer enim neque volutpat ac tincidunt vitae semper quis. Vivamus 
+                at augue eget arcu. Adipiscing tristique risus nec feugiat in fermentum. Venenatis cras sed felis eget. 
+                Tincidunt eget nullam non nisi est sit amet facilisis. Libero volutpat sed cras ornare arcu dui vivamus 
+                arcu felis.</p>
+
+                <p>Tristique senectus et netus et. Auctor urna nunc id cursus. Scelerisque eleifend donec pretium vulputate. 
+                Sed blandit libero volutpat sed cras ornare. Nibh nisl condimentum id venenatis a condimentum vitae sapien 
+                pellentesque. A erat nam at lectus urna duis convallis convallis. Duis ultricies lacus sed turpis tincidunt. 
+                Amet aliquam id diam maecenas ultricies mi eget mauris. Blandit cursus risus at ultrices mi tempus imperdiet 
+                nulla. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis.</p>
+
+            </article>
         </div>
 
         <div class="panel" id="rightPanel">
