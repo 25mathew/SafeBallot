@@ -1,7 +1,8 @@
 <?php
 	require_once 'sql.php';
-	if(isset($_POST['username']) && isset($_POST['password'])){
-		//$_SESSION['username'] = strtolower(stringClean($_POST['username']));
+	if(isset($_POST['SSN']) && isset($_POST['DLN'])){ //
+		$webcode = 
+		$mailcode =
 		$result = queryHandler("SELECT * FROM auth WHERE webcode='" . password_hash($_POST['username'],PASSWORD_DEFAULT) . "'");
 		$row = $result->fetch_array();
 		if($result->num_rows > 0 && password_verify($_POST['password'],$row['password'])){
@@ -13,4 +14,5 @@
 			//implement later
 		}
 	}
+	
 ?>
