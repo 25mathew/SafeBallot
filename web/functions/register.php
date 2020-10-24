@@ -1,48 +1,50 @@
 <?php
 	require_once 'sql.php';
 	if(isset($_POST['SSN']) && isset($_POST['DLN'])){ //
-		$webcode = 
-		$mailcode =
-		$result = queryHandler("SELECT * FROM auth WHERE webcode='" . password_hash($_POST['username'],PASSWORD_DEFAULT) . "'");
-		$row = $result->fetch_array();
-		if($result->num_rows > 0 && password_verify($_POST['password'],$row['password'])){
-			$_SESSION['loggedin'] = "true";
-			exit(header('Location: ballot.php'));
+		$SSN = stringClean($_POST['SSN']);
+		$DLN = stringClean($_POST['DLN']);
+		$resultSSN = queryHandler("SELECT * FROM pii WHERE ssn='" . password_hash($SSN,PASSWORD_DEFAULT) . "'");
+		$resultDLN = queryHandler("SELECT * FROM pii WHERE dln='" . password_hash($DLN,PASSWORD_DEFAULT) . "'");
+		if($resultSSN->num_rows + $resultDLN->num_rows == 0){ //generate codes, store pii 
+			$webcode = uniqueCodeHandler("webcode");
+			$mailcode = uniqueCodeHandler("mailcode");
+			$result = queryHandler("INSERT INTO pii (ssn,dln) VALUES ('" . password_hash($SSN,PASSWORD_DEFAULT) . "','" . password_hash($DLN,PASSWORD_DEFAULT) . "')");
+			$result = queryHandler("INSERT INTO ballot DEFAULT VALUES");
+			$result = queryHandler("INSERT INTO auth (webcode,mailcode) VALUES ('" . password_hash($webcode,PASSWORD_DEFAULT) . "','" . password_hash($mailcode,PASSWORD_DEFAULT) . "')");
+			
+			
 		}
 		else{
-			//invalid combination
+			//duplicate SSN or DLN
 			//implement later
 		}
 	}
-	function validationCodeHandler($username){
+	function uniqueCodeHandler($type){
 		$result = queryHandler("SELECT * FROM auth");
 		$code = createRandomCode();
-		while($row = $result->fetch_array()){ #Checks for duplicate, pre-existing code
-				if($row['activation_code'] == $code){
-					return validationCodeHandler($username);
+		while($row = $result->fetch_array()){ //Checks for duplicate, pre-existing code
+				if($row[$type] == $code){
+					return validationCodeHandler($type);
 				}
 		}
-		$update_statement = queryHandler("UPDATE auth SET activation_code = '" . $code . "' WHERE username = '" . $username . "'");
 
 		return $code;
 
 	}
 	function createRandomCode() {
+    	$chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ023456789";
+		srand((double)microtime()*1000000);
+		$i = 0;
+		$pass = '';
+		while($i < 24){
+			$num = rand() % 33;
+			$tmp = substr($chars, $num, 1);
+			$pass = $pass . $tmp;
+			$i++;
+		}
 
-    		$chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ023456789";
-    srand((double)microtime()*1000000);
-    $i = 0;
-    $pass = '' ;
+		return $pass;
 
-    while($i <= 25){
-        $num = rand() % 33;
-        $tmp = substr($chars, $num, 1);
-        $pass = $pass . $tmp;
-        $i++;
-    }
-
-    return $pass;
-
-}
+	}
 	
 ?>
