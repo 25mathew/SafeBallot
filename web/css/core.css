@@ -222,10 +222,60 @@ article {
 }
 
 .button{
-
+    
 }
 
 .leftButton {
     color: var(--black); /*text color*/
     background-color: var(--white1);
+}
+
+.bigButton {
+    color: var(--white1);
+    background-color: var(--white1);
+    border: solid;
+    border-width: 1px;
+    border-style:groove;
+    font-size: 36px;
+    font-weight:bold;
+
+}
+
+.BigRButton {
+    position: absolute;
+    top: 51%;
+    left: 41%;
+    padding: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.BigR {
+    position: absolute;
+    top: 44%;
+    left: 34%;
+    font-size: 250px;
+}
+
+.BigVButton {
+    position: absolute;
+    top: 39%;
+    left: 60%;
+    padding: 25px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.BigV {
+    color: var(--blue);
+
+    position: absolute;
+    top: 18%;
+    left: 66%;
+    font-size: 250px;
+}
+
+.IndexCenterFields {
+    position: relative;
+
 }
