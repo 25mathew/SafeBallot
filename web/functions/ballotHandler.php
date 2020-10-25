@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if(issset($_POST['ballot'])){
 		$result = queryHandler("SELECT * FROM ballot WHERE id = " . $_SESSION['ID']);
 		#$row = $result->fetch_array();
