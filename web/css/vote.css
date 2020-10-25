@@ -1,8 +1,6 @@
-#vote-ballot > div {
+#vote-ballot {
     grid-gap: 35px;
     flex-wrap: wrap;
-    width: 100%;
-    display: flex;
 }
 
 .ballot-option {

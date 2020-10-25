@@ -221,17 +221,21 @@ article {
     clear: both;
 }
 
-.button{
-    
-}
-
-
 .button {
-
+    color: var(--white1);
+    background-color: var(--white1);
+    border: solid;
+    border-width: 1px;
+    border-style: groove;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
 }
-
-
-
 
 .leftButton {
     color: var(--black); /*text color*/
@@ -262,10 +266,18 @@ article {
     text-decoration:none;
 }
 
+.BigR {
+    transition: all .2s ease-in-out;
+    position: absolute;
+    top: 44%;
+    left: 34%;
+    font-size: 250px;
+}
+
 .BigRButton {
     position: absolute;
     top: 51%;
-    left: 41%;
+    left: 43%;
     padding: 25px;
     padding-left: 35px;
     padding-right: 35px;
@@ -275,11 +287,16 @@ article {
         background-color: var(--red);
         box-shadow: 0px 15px 20px rgba(234, 66, 53, 0.4);
     }
+        .BigRButton:hover + .BigR {
+            transform: scale(1.1);
+        }
 
-.BigR {
+.BigV {
+    transition: all .2s ease-in-out;
+    color: var(--blue);
     position: absolute;
-    top: 44%;
-    left: 34%;
+    top: 18%;
+    left: 66%;
     font-size: 250px;
 }
 
@@ -295,17 +312,15 @@ article {
         background-color: var(--blue);
         box-shadow: 0px 15px 20px rgba(48, 161, 237, 0.4);
     }
+        .BigVButton:hover + .BigV {
+            transform: scale(1.1);
+        }
 
-.BigV {
-    color: var(--blue);
 
-    position: absolute;
-    top: 18%;
-    left: 66%;
-    font-size: 250px;
-}
 
 .IndexCenterFields {
     position: relative;
 
 }
+
+#indexButton{/*Leave me. No delete --Slate*/}

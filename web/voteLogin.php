@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css" />
 	<link rel="stylesheet" href="css/core.css"/>
     <link rel="stylesheet" href="css/register.css" />
+	
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -12,6 +13,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery -->
 	<script src="scripts/hamburgerMenu.js"></script>
 	<title>SafeBallot: Login</title>
+
 </head>
 
 <body>
@@ -41,7 +43,9 @@
 				?> -->
 
                 <input type="submit" value="Submit" class="button">
-                <a href="requestNewPassword.html" class="button">Lost your password?</a>
+				<div class="button">
+					<a href="requestNewPassword.html">Lost your password?</a>
+				</div>
 				
             </form>
 			
