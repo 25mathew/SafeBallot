@@ -32,15 +32,17 @@
                 <!--<a href="ballot.html" class="button">Submit</a>-->
                 <input type="submit" value="Submit" class="button">
                 <a href="requestNewPassword.html" class="button">Lost your password?</a>
-				<?php
-					session_start();
-					if(isset($_SESSION['error'])){
-						$_SESSION['error'] = null;
-					}
-					echo '<h1 class="contentPanel" style="text-align:center">Invalid login credentials!</h1>';
-				?>
+				
             </form>
+			<?php
+				session_start();
+				if(isset($_SESSION['error'])){
+					$_SESSION['error'] = null;
+					echo '<h1 class="contentPanel" style="text-align:center">Invalid login credentials!</h1>';
+				}
+			?>
         </div>
+		
     </div>
 
     <div class="panel sidebar" id="rightPanel">
