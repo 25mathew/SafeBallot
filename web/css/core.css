@@ -225,6 +225,14 @@ article {
     
 }
 
+
+.button {
+
+}
+
+
+
+
 .leftButton {
     color: var(--black); /*text color*/
     background-color: var(--white1);
@@ -235,10 +243,23 @@ article {
     background-color: var(--white1);
     border: solid;
     border-width: 1px;
-    border-style:groove;
+    border-style: groove;
     font-size: 36px;
-    font-weight:bold;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
 
+.bigButton:hover {
+    
+    color: #fff;
+    transform: translateY(-7px);
+    text-decoration:none;
 }
 
 .BigRButton {
@@ -249,6 +270,11 @@ article {
     padding-left: 35px;
     padding-right: 35px;
 }
+
+    .BigRButton:hover {
+        background-color: var(--red);
+        box-shadow: 0px 15px 20px rgba(234, 66, 53, 0.4);
+    }
 
 .BigR {
     position: absolute;
@@ -265,6 +291,10 @@ article {
     padding-left: 35px;
     padding-right: 35px;
 }
+    .BigVButton:hover {
+        background-color: var(--blue);
+        box-shadow: 0px 15px 20px rgba(48, 161, 237, 0.4);
+    }
 
 .BigV {
     color: var(--blue);

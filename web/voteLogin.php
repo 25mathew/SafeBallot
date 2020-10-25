@@ -31,13 +31,14 @@
                 <label for="password">Password</label><br>
                 <input type="password" class="text-box" name="password"> <br>
 
-				<?php
+				<!--<?php
 				session_start();
 				if(isset($_SESSION['error'])){
 					$_SESSION['error'] = null;
-					echo '<h1 class="contentPanel" style="text-align:center">Invalid login credentials!</h1><br>';
+					echo '<h1 class="contentPanel" style="text-align:center">Invalid login credentials!</h1><br>
+					';
 				}
-				?>
+				?> -->
 
                 <input type="submit" value="Submit" class="button">
                 <a href="requestNewPassword.html" class="button">Lost your password?</a>
