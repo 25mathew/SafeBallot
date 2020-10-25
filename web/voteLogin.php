@@ -39,7 +39,6 @@
 				}
 				?>
 
-                <!--<a href="ballot.html" class="button">Submit</a>-->
                 <input type="submit" value="Submit" class="button">
                 <a href="requestNewPassword.html" class="button">Lost your password?</a>
 				

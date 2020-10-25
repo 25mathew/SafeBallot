@@ -4,16 +4,24 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
         <link rel="stylesheet" href="css/core.css" />
 		<link rel="stylesheet" href="css/vote.css"/>
-    </head>
-    <body>
 
-		<div class="panel" id="leftPanel" >
+		<!--Hamburger menu on the next three scripts-->
+		<link rel="stylesheet" href="css/hamburgerMenu.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery -->
+		<script src="scripts/hamburgerMenu.js"></script>
+    </head>
+	<body>
+
+		<div class="panel" id="leftPanel">
 			<a id="logo" href="index.html">Safe Ballot</a>
 			<h1>Cast your vote.</h1>
 		</div>
 
 		<div class="panel" id="contentPanel">
 			<div id="vote-ballot">
+				<h1>Missouri - District 7 - 2020 Election Ballot</h1>
+				<p>For the purposes of this demo, this is the only included ballot.</p>
+
 				<h4>President</h4>
 				<div id="pres-div">
 					<div class="ballot-option rep">
@@ -48,39 +56,143 @@
 						<p>Rik Combs</p>
 					</div>
 				</div>
+
+				<h4>U.S House Missouri District 7</h4>
+				<div id="rep-div">
+					<div class="ballot-option rep">
+						<p>Billy Long</p>
+					</div>
+					<div class="ballot-option dem">
+						<p>Teresa Montseny</p>
+					</div>
+					<div class="ballot-option lib">
+						<p>Kevin Craig</p>
+					</div>
+				</div>
+
+				<h4>Lieutenant Governor of Missouri</h4>
+				<div id="liu-gov-div">
+					<div class="ballot-option rep">
+						<p>Mike Kehoe</p>
+					</div>
+					<div class="ballot-option dem">
+						<p>Alissia Canady</p>
+					</div>
+					<div class="ballot-option green">
+						<p>Kelley Dragoo</p>
+					</div>
+					<div class="ballot-option lib">
+						<p>Bill Slantz</p>
+					</div>
+				</div>
+				<h4>Attorney</h4>
+				<div id="att-div">
+					<div class="ballot-option rep">
+						<p>Eric Schmitt</p>
+					</div>
+					<div class="ballot-option dem">
+						<p>Richard Finneran</p>
+					</div>
+					<div class="ballot-option lib">
+						<p>Kevin Babcock</p>
+					</div>
+				</div>
+
+				<h4>Missouri Secretary of State</h4>
+				<div id="mo-sec-st">
+					<div class="ballot-option rep">
+						<p>Jay Ashcroft</p>
+					</div>
+					<div class="ballot-option dem">
+						<p>Yinka Faleti</p>
+					</div>
+					<div class="ballot-option con">
+						<p>Paul Venable</p>
+					</div>
+					<div class="ballot-option green">
+						<p>Paul Lehmann</p>
+					</div>
+					<div class="ballot-option lib">
+						<p>Carl Herman Freese</p>
+					</div>
+					
+				</div>
+
+				<h4>Missouri Treasurer</h4>
+				<div id="mo-tres">
+					<div class="ballot-option rep">
+						<p>Scott Fitzpatrick</p>
+					</div>
+					<div class="ballot-option dem">
+						<p>Vicki Englund</p>
+					</div>
+					<div class="ballot-option green">
+						<p>Joseph Civettini</p>
+					</div>
+					<div class="ballot-option lib">
+						<p>Nick Kasoff</p>
+					</div>
+				</div>
+
+				<h4>Missouri Supreme Court</h4>
+				<div id="mo-sup">
+					<div class="ballot-option non">
+						<p>Patricia Breckenridge</p>
+					</div>
+				</div>
+
+				<h4>Missouri House Rep. District 128</h4>
+				<div id="mo-rep-d-128">
+					<div class="ballot-option rep">
+						<p>Mike Stephens</p>
+					</div>
+					<div class="ballot-option dem">
+						<p>Marvin Manring</p>
+					</div>
+				</div>
+
+				<h4>Missouri Court of Appeals Southern District</h4>
+				<div id="mo-ca-sd">
+					<div class="ballot-option non">
+						<p>Gary W. Lynch</p>
+					</div>
+				</div>
+
 			</div>
+
+			
 
 			<a href="voteConfirmation.html" name="ballotSubmission" class="button">Submit Ballot</a>
 		</div>
 
-        <div class="panel sidebar" id="rightPanel">
-            <!--Hamburger Menu-->
-		    <div class="CenterTop">
-			    <div class="open" padding="100px">
-				    <span class="cls" padding="100px"></span>
-				    <span padding="100px">
-					    <ul class="sub-menu ">
-						    <li>
-							    <a href="index.html" title="home">Home</a>
-						    </li>
-						    <li>
-							    <a href="howTo.html" title="howto">How to vote online</a>
-						    </li>
-						    <li>
-							    <a href="registerToVote.html" title="register">Register</a>
-						    </li>
-						    <li>
-							    <a href="voteLogin.php" title="vote">Vote</a>
-						    </li>
-						    <li>
-							    <a href="covidInfo.html" title="covidInfo">Covid-19</a>
-						    </li>
-					    </ul>
-				    </span>
-				    <span class="cls"></span>
-			    </div>
-		    </div>
-        </div>
-    </body>
+		<div class="panel sidebar" id="rightPanel">
+			<!--Hamburger Menu-->
+			<div class="CenterTop">
+				<div class="open" padding="100px">
+					<span class="cls" padding="100px"></span>
+					<span padding="100px">
+						<ul class="sub-menu ">
+							<li>
+								<a href="index.html" title="home">Home</a>
+							</li>
+							<li>
+								<a href="howTo.html" title="howto">How to vote online</a>
+							</li>
+							<li>
+								<a href="registerToVote.html" title="register">Register</a>
+							</li>
+							<li>
+								<a href="voteLogin.php" title="vote">Vote</a>
+							</li>
+							<li>
+								<a href="covidInfo.html" title="covidInfo">Covid-19</a>
+							</li>
+						</ul>
+					</span>
+					<span class="cls"></span>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
 

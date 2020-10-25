@@ -1,19 +1,41 @@
-#vote-ballot {
+#vote-ballot > div {
+    grid-gap: 35px;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
 }
 
 #pres-div {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 35px;
 }
 
 #gov-div {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 35px;
 }
+
+#rep-div {
+}
+
+#liu-gov-div{
+}
+
+#att-div {
+}
+
+#mo-sec-st{}
+
+#mo-tres {
+}
+
+#mo-sup {
+}
+
+#mo-rep-d-128 {
+}
+
+#mo-ca-sd {
+}
+
+
+
 
 .ballot-option {
     height: 50px;
