@@ -1,4 +1,12 @@
-#vote-ballot > div{
+:root {
+    --blue: #30A1ED;
+    --red: #EA4235;
+    --darkgrey: #6a6a6a;
+    --yellow: #FFFA7B;
+    --green: #49B025;
+}
+
+    #vote-ballot > div{
     display: flex;
     grid-gap: 35px;
     flex-wrap: wrap;
@@ -25,29 +33,30 @@
  }
 
 .rep {
-    border: 2px solid red;
+    border: 2px solid var(--red);
 }
 
 .dem {
-    border: 2px solid blue;
+    border: 2px solid var(--blue);
 }
 
 .con {
-    border: 2px solid grey;
+    border: 2px solid var(--darkgrey);
 }
 
 .green {
-    border: 2px solid green;
+    border: 2px solid var(--green);
 }
 
 .lib {
-    border: 2px solid #E8EB55;
+    border: 2px solid var(--yellow);
 }
 
 .selected {
-
+    transition: .3s;
 }
 
 .not-selected {
     opacity: .25;
+    transition: .3s;
 }
