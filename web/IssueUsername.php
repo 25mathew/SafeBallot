@@ -21,6 +21,7 @@
 
 				<!--THIS IS WHERE YOU WILL INSERT THE USERNAME-->
 				<?php
+					session_start();
 					if(isset($_SESSION['webcode'])){
 						echo '<h4 id="userAccountField" name="usernameField">' . $_SESSION['webcode'] . '</h4>';
 					}
