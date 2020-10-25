@@ -15,7 +15,7 @@
 		$result = queryHandler($statement);
 		while($row = $result->fetch_array()){
 			if(password_verify($inputOne,$row[$fieldOne]) && password_verify($inputTwo,$row[$fieldTwo])){
-				$_SESSION['ID'] = $row['ID'];
+				//$_SESSION['ID'] = $row['ID'];
 				return true;
 			}
 		}
