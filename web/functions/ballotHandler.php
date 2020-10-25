@@ -4,11 +4,12 @@
 		$row = $result->fetch_array();
 		if($row['voted'] == "false"){
 			$result = queryHandler('UPDATE ballot SET voted = "true" WHERE id = ' . $_SESSION['ID']);
-			echo "congrats you voted";
+			$_SESSION['vote_result'] = "Congratulations! Your vote was received!";
 		}
 		else{
-			echo "you already voted";
+			$_SESSION['vote_result'] = "You have already voted!";
 		}
+		header('Location: ../voteConfirmation.php');
 	}
 
 
