@@ -19,7 +19,15 @@
             <div class="CenterContent">
                 <h1 class="contentPanel" style="text-align:center">Your password is on its way!</h1>
 
-                <!--THIS IS WHERE YOU WILL INSERT THE NEW PASSWORD-->
+                <?php
+					$_SESSION['newPass'] = "yes"; //temporary
+					if(isset($_SESSION['newPass'])){
+						echo '<p id="mailcode">' . $_SESSION['mailcode'] . '</p>';
+					}
+					else{
+						header('Location: index.php');
+					}
+				?>
 
 
             </div>
