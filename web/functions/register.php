@@ -4,13 +4,14 @@
 		if(!(hashedQueryHandler($_POST['SSN'],'SSN','SELECT * FROM pii') || hashedQueryHandler($_POST['DLN'],'DLN','SELECT * FROM pii'))){ //generate codes, store pii 
 			$_SESSION['webcode'] = uniqueCodeHandler("webcode");
 			$_SESSION['mailcode'] = uniqueCodeHandler("mailcode");
-			$result = queryHandler("INSERT INTO pii (id,ssn,dln) VALUES (" . $_SESSION['ID'] . ",'" . password_hash($SSN,PASSWORD_DEFAULT) . "','" . password_hash($DLN,PASSWORD_DEFAULT) . "')");
-			$result = queryHandler("INSERT INTO ballot (id, voted) VALUES (" . $_SESSION['ID'] . ",'false')");
-			$result = queryHandler("INSERT INTO auth (id,webcode,mailcode) VALUES (" . $_SESSION['ID'] . ",'" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "','" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "')");
+			$result = queryHandler("INSERT INTO pii (ID,SSN,DLN) VALUES (" . $_SESSION['ID'] . ",'" . password_hash($SSN,PASSWORD_DEFAULT) . "','" . password_hash($DLN,PASSWORD_DEFAULT) . "')");
+			$result = queryHandler("INSERT INTO ballot (ID, voted) VALUES (" . $_SESSION['ID'] . ",'false')");
+			$result = queryHandler("INSERT INTO auth (ID,webcode,mailcode) VALUES (" . $_SESSION['ID'] . ",'" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "','" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "')");
+			echo "$_SESSION['ID'];
 			$_SESSION['ID'] = null;
-			echo "webcode: " . $_SESSION['webcode']; 
-			echo "mailcode: " . $_SESSION['mailcode'];; 
-			echo "congrats ya registered m8";
+			echo "\nwebcode: " . $_SESSION['webcode']; 
+			echo "\nmailcode: " . $_SESSION['mailcode'];; 
+			echo "\ncongrats ya registered m8";
 		}
 		else{
 			echo "you doofus you absolute bafoon you've been caught attempting identity theft please wait while we contact the police";
