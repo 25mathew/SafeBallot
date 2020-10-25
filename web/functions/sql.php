@@ -31,15 +31,14 @@
 		return false;
 	}
 	function assignID(){
-		$result = queryHandler("$SELECT * FROM auth");
+		$result = queryHandler("SELECT * FROM auth");
 		$max = 0;
-		//while($row = $result->fetch_array()){
-		//	if($row['ID'] > $max){
-		//		$max = $row['ID'];
-		//	}
-		//}
+		while($row = $result->fetch_array()){
+			if($row['ID'] > $max){
+				$max = $row['ID'];
+			}
+		}
 		$_SESSION['ID'] = ++$max;
-		//$_SESSION['ID'] = 6;
 	}
 //if(password_verify($_POST['password'],$row['password'])){
  ?>
