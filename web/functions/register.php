@@ -1,22 +1,17 @@
 <?php
 	require_once 'sql.php';
 	if(isset($_POST['SSN']) && isset($_POST['DLN'])){ //
-		$SSN = stringClean($_POST['SSN']);
-		$DLN = stringClean($_POST['DLN']);
-		$resultSSN = queryHandler("SELECT * FROM pii WHERE ssn='" . password_hash($SSN,PASSWORD_DEFAULT) . "'");
-		$resultDLN = queryHandler("SELECT * FROM pii WHERE dln='" . password_hash($DLN,PASSWORD_DEFAULT) . "'");
-		if($resultSSN->num_rows + $resultDLN->num_rows == 0){ //generate codes, store pii 
+		if(hashedQueryHandler($_POST['SSN'],'ssn','SELECT * FROM auth') || hashedQueryHandler($_POST['DLN'],'dln','SELECT * FROM auth')){ //generate codes, store pii 
 			$_SESSION['webcode'] = uniqueCodeHandler("webcode");
 			$_SESSION['mailcode'] = uniqueCodeHandler("mailcode");
 			$result = queryHandler("INSERT INTO pii (ssn,dln) VALUES ('" . password_hash($SSN,PASSWORD_DEFAULT) . "','" . password_hash($DLN,PASSWORD_DEFAULT) . "')");
 			$result = queryHandler("INSERT INTO ballot (voted) VALUES ('false')");
 			$result = queryHandler("INSERT INTO auth (webcode,mailcode) VALUES ('" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "','" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "')");
-			echo "<h1>" . $_SESSION['webcode'] . "</h1>";
-			echo "<h1>" . $_SESSION['mailcode'] . "</h1>";
-			echo "<h1>" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "</h1>";
-			echo "<h1>" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "</h1>";
+			echo $_SESSION['webcode'] . "\n" . $_SESSION['mailcode'];
+			echo "congrats ya registered m8";
 		}
 		else{
+			echo "you doofus you absolute bafoon you've been caught attempting identity theft please wait while we contact the police";
 			//duplicate SSN or DLN
 			//implement later
 		}

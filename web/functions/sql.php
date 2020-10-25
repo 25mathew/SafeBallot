@@ -20,5 +20,14 @@
 		}
 		return false;
 	}
+	function hashedQueryHandler($input,$field,$statement){
+		$result = queryHandler($statement);
+		while($row = $result->fetch_array()){
+			if(password_verify($input,$row[$field])){
+				return true;
+			}
+		}
+		return false;
+	}
 //if(password_verify($_POST['password'],$row['password'])){
  ?>
