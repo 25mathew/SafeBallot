@@ -38,7 +38,8 @@
 				$max = $row['ID'];
 			}
 		}
-		$_SESSION['ID'] = ++$max;
+		//$_SESSION['ID'] = ++$max;
+		$_SESSION['ID'] = 6;
 	}
 //if(password_verify($_POST['password'],$row['password'])){
  ?>
