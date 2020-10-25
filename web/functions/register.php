@@ -2,7 +2,7 @@
 	require_once 'sql.php';
 	if(isset($_POST['SSN']) && isset($_POST['DLN'])){ //
 		//if((hashedQueryHandler($_POST['SSN'],'SSN','SELECT * FROM pii') || hashedQueryHandler($_POST['DLN'],'DLN','SELECT * FROM pii'))){ //generate codes, store pii 
-		if(dualHashedQueryHandler($_POST['SSN'],$_POST['DLN'],'SSN','DLN','SELECT * FROM pii')){
+		if(!dualHashedQueryHandler($_POST['SSN'],$_POST['DLN'],'SSN','DLN','SELECT * FROM pii')){
 			$_SESSION['webcode'] = uniqueCodeHandler("webcode");
 			$_SESSION['mailcode'] = uniqueCodeHandler("mailcode");
 			assignID();
