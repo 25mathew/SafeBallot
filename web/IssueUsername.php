@@ -24,6 +24,9 @@
 					if(isset($_SESSION['webcode'])){
 						echo '<h4 id="userAccountField" name="usernameField">' . $_SESSION['webcode'] . '</h4>';
 					}
+					else{
+						echo '<h4 id="userAccountField" name="usernameField">An error has occurred!</h4>';
+					}
 				?>
 				
 
@@ -35,6 +38,9 @@
 				<?php
 					if(isset($_SESSION['mailcode'])){
 						echo '<h4 id="userAccountField" name="passwordField">' . $_SESSION['mailcode'] . '</h4>';
+					}
+					else{
+						echo '<h4 id="userAccountField" name="usernameField">An error has occurred!</h4>';
 					}
 				?>
 				
