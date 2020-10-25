@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$result = queryHandler("SELECT * FROM ballot WHERE id = 7");
+	#$result = queryHandler("SELECT * FROM ballot WHERE id = 7");
 	#$row = $result->fetch_array();
 	#if($row['voted'] == "false"){
 	#	$result = queryHandler('UPDATE ballot SET voted = "true" WHERE id = ' . $_SESSION['ID']);
