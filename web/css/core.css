@@ -3,6 +3,7 @@
 :root {
     --blue: #30A1ED;
     --red: #EA4235;
+    --redHover: #d33b30;
     --black: #000000;
     --white1: #f8f8f8;
     --white2: #ffffff;
@@ -75,6 +76,10 @@ h4 {
     background-color: var(--red);
     width: 5vw;
 }
+sidebar {}
+#rightPanel:hover{
+    background-color:var(--redHover);
+}
 
 #tinput {
     border: 2px solid var(--black);
@@ -117,6 +122,17 @@ h4 {
     max-width: 50%;
 }
 
+.CenterTop {
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -30px);
+
+    align-content: start;
+}
+
+
+
 label {
     width: 100%;
     position:relative;
@@ -147,3 +163,4 @@ article {
     padding: 2em;
     position: relative;
 }
+

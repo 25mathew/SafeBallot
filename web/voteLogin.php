@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="css/core.css" />
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Hamburger menu on the next three scripts-->
+	<link rel="stylesheet" href="css/hamburgerMenu.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery -->
+	<script src="scripts/hamburgerMenu.js"></script>
 </head>
 
 <body>
@@ -31,8 +36,33 @@
         </div>
     </div>
 
-    <div class="panel" id="rightPanel">
-
+    <div class="panel sidebar" id="rightPanel">
+        <!--Hamburger Menu-->
+		<div class="CenterTop">
+			<div class="open" padding="100px">
+				<span class="cls" padding="100px"></span>
+				<span padding="100px">
+					<ul class="sub-menu ">
+						<li>
+							<a href="index.html" title="home">Home</a>
+						</li>
+						<li>
+							<a href="howto.html" title="howto">How to vote online</a>
+						</li>
+						<li>
+							<a href="registerToVote.html" title="register">Register</a>
+						</li>
+						<li>
+							<a href="voteLogin.php" title="vote">Vote</a>
+						</li>
+						<li>
+							<a href="covidInfo.html" title="covidInfo">Covid-19</a>
+						</li>
+					</ul>
+				</span>
+				<span class="cls"></span>
+			</div>
+		</div>
     </div>
 </body>
 </html>
