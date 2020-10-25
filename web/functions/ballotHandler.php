@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	echo "23452345sldkfjoi";
 	if(issset($_POST['ballot'])){
 		#$result = queryHandler("SELECT * FROM ballot WHERE id = 7");
 		#$row = $result->fetch_array();
@@ -13,6 +14,6 @@
 		#header('Location: ../voteConfirmation.php');
 		echo "hello sir";
 	}
-
+	echo "sldfj";
 
 ?>
