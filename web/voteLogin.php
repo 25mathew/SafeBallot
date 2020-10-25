@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css" />
-    <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/register.css" />
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -54,7 +54,7 @@
 							<a href="index.html" title="home">Home</a>
 						</li>
 						<li>
-							<a href="howto.html" title="howto">How to vote online</a>
+							<a href="howTo.html" title="howto">How to vote online</a>
 						</li>
 						<li>
 							<a href="registerToVote.html" title="register">Register</a>
