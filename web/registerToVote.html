@@ -21,67 +21,53 @@
             <h2 id="register-header">Registration</h2>
             <form action="functions/register.php" method="post" id="register-form" style="display:block; text-align:left">
                 <div class="row">
-                    <div class="column"> <!--Left column-->
-                        <label for="first-name">First name</label>
-                        <input type="text" class="text-box" id="first-name" name="first-name"><br>
+                    <div class="column">
+                        <!--Left column-->
+                        <label for="first-name">First name</label><br>
+                        <input type="text" class="text-box" id="first-name" name="first-name" required><br>
 
-                        <label for="middle-name">Middle name</label>
-                        <input type="text" class="text-box" id="middle-name" name="middle-name"><br>
+                        <label for="middle-name">Middle name</label><br>
+                        <input type="text" class="text-box" id="middle-name" name="middle-name" required><br>
 
-                        <label for="last-name">Last name</label>
-                        <input type="text" class="text-box" id="last-name" name="last-name"><br>
+                        <label for="last-name">Last name</label><br>
+                        <input type="text" class="text-box" id="last-name" name="last-name" required><br>
 
-                        <p>Gender:</p>
-                        <label for="gender-select-male">Male</label>
-                        <input type="radio" class="radio-button" name="gender-select"><br>
-                        <label for="gender-select-female">Female</label>
-                        <input type="radio" class="radio-button" name="gender-select"><br>
+                        <label for="address">Address</label><br>
+                        <input type="text" class="text-box" id="address" name="address" required><br>
 
-                        
+                        <label for="state">State</label><br>
+                        <input type="text" class="text-box" id="state" name="state" required><br>
 
-                        <label for="ssn">Social Security Number</label>
-                        <input type="text" class="text-box" name="SSN"><br>
+                        <label for="city">City</label><br>
+                        <input type="text" class="text-box" id="city" name="city" required><br>
 
-                        <label for="address">Address</label>
-                        <input type="text" class="text-box" id="address" name="address"><br>
-
-                        <label for="state">State</label>
-                        <input type="text" class="text-box" id="state" name="state"><br>
-
-                        <label for="signature">Signature</label>
-                        <input type="text" class="text-box" id="signature" name="signature"><br>
-
-                        <label for="sign-date">Date</label>
-                        <input type="text" class="text-box" id="sign-date" name="sign-date"><br>
-
-
+                        <label for="zipcode">Zipcode</label><br>
+                        <input type="text" class="text-box" id="zipcode" name="zipcode" required><br>
                     </div>
-                    <div class="column"><!--Right column-->
-                        <p>Will you be 18 years of age on or before election day?</p>
-                        <label for="age-confirm-yes">Yes</label>
-                        <input type="radio" class="radio-button radio-yes" name="age-confirm"><br>
-                        <label for="age-confirm-no">No</label>
-                        <input type="radio" class="radio-button radio-no" name="age-confirm"><br>
+                    <div class="column">
+                        <!--Right column-->
 
-                        
+                        <label for="ssn">Social Security Number</label><br>
+                        <input type="text" class="text-box" name="SSN" required><br>
 
-                        <label for="driverLicense">Driver License Number</label>
-                        <input type="text" class="text-box" name="DLN"><br>
+                        <label for="voterId">Voter Id Number</label><br>
+                        <input type="text" class="text-box" name="voterId" required><br>
 
-                        <label for="date-of-birth">Date of birth</label>
-                        <input type="text" class="text-box" id="date-of-birth" name="date-of-birth"><br>
+                        <label for="driverLicense">Driver License Number</label><br>
+                        <input type="text" class="text-box" name="DLN" required><br>
 
-                        <label for="city">City</label>
-                        <input type="text" class="text-box" id="city" name="city"><br>
-
-                        <label for="zipcode">Zipcode</label>
-                        <input type="text" class="text-box" id="zipcode" name="zipcode"><br>
-
-
-
-
+                        <label for="date-of-birth">Date of birth</label><br>
+                        <input type="text" class="text-box" id="date-of-birth" name="date-of-birth" required><br>
                     </div>
-                </div>
+                </div><br /><br />
+
+                <p><i>Legally binding, under penalty of law:</i> By signing below you promise (or affirm) that all information entered herein is accurate and truthfull?</p>
+                <label for="signature">Signature</label><br>
+                <input type="text" class="text-box" id="signature" name="signature" required><br>
+
+                <label for="sign-date">Date</label><br>
+                <input type="datetime-local" class="text-box" id="sign-date" name="sign-date" required><br>
+
                 <!--<a href="ballot.html" class="button">Submit</a>-->
                 <button type="submit" form="register-form" value="Register" class="button" id="register-button">Register</button>
             </form>

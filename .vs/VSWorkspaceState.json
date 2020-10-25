@@ -3,8 +3,10 @@
     "",
     "\\web",
     "\\web\\css",
+    "\\web\\functions",
+    "\\web\\images",
     "\\web\\scripts"
   ],
-  "SelectedNode": "\\web\\voteLogin.php",
+  "SelectedNode": "\\web\\registerToVote.html",
   "PreviewInSolutionExplorer": false
 }

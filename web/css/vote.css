@@ -5,12 +5,14 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    grid-gap: 35px;
 }
 
 #gov-div {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    grid-gap: 35px;
 }
 
 .ballot-option {
@@ -20,7 +22,6 @@
     border-radius: 5px;
     box-shadow: 1px 1px 10px rgba(0,0,0,.25);
     text-align: center;
-    margin: auto;
 }
 
 .ballot-option p {
