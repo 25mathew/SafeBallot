@@ -7,7 +7,8 @@
 			$result = queryHandler("INSERT INTO pii (ssn,dln) VALUES ('" . password_hash($SSN,PASSWORD_DEFAULT) . "','" . password_hash($DLN,PASSWORD_DEFAULT) . "')");
 			$result = queryHandler("INSERT INTO ballot (voted) VALUES ('false')");
 			$result = queryHandler("INSERT INTO auth (webcode,mailcode) VALUES ('" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "','" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "')");
-			echo $_SESSION['webcode'] . "\n" . $_SESSION['mailcode'];
+			echo "webcode: " . $_SESSION['webcode']; 
+			echo "mailcode: " . $_SESSION['mailcode'];; 
 			echo "congrats ya registered m8";
 		}
 		else{
