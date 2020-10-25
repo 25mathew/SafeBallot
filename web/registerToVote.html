@@ -1,76 +1,115 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/register.css"/>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
-    
-	<link rel="stylesheet" href="css/core.css" />
-	
-
-	<!--Hamburger menu on the next three scripts-->
-	<link rel="stylesheet" href="css/hamburgerMenu.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery -->
-	<script src="scripts/hamburgerMenu.js"></script>
-
+    <!--Hamburger menu on the next three scripts-->
+    <link rel="stylesheet" href="css/hamburgerMenu.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery -->
+    <script src="scripts/hamburgerMenu.js"></script>
 </head>
 
-<body>
-    <div div class="panel" id="leftPanel">
-        <h4 class="leftPanelH4" href="index.html">SafeBallot</h4>
-        <h1 class="leftPanelH1">vote/issue</h1>
-    </div>
+    <body>
+        <div class="panel" id="leftPanel">
+            <a id="logo" href="index.html">Safe Ballot</a>
+            <h1>Your vote counts.</h1>
+        </div>
 
-    <div class="panel" id="contentPanel">
-        
-        <div class="CenterContent">
-            <h1 class="contentPanel" style="text-align:center">Login</h1>
+        <div class="panel" id="contentPanel">
+            <h2 id="register-header">Registration</h2>
+            <form action="functions/register.php" method="post" id="register-form" style="display:block;">
+                <p>Are you a citizen of the United States?</p>
+                <label for="citizen-yes">Yes</label>
+                <input type="radio" class="radio-button radio-yes" name="citizen"><br>
+                <label for="citizen-no">No</label>
+                <input type="radio" class="radio-button radio-no" name="citizen"><br>
 
-            <form action="functions/register.php" method="post" style="display:block;">
-                <label for="ssn">Social Security Number</label><br>
-                <input type="text" id="tinput" name="SSN"><br>
+                <p>Will you be 18 years of age on or before election day?</p>
+                <label for="age-confirm-yes">Yes</label>
+                <input type="radio" class="radio-button radio-yes" name="age-confirm"><br>
+                <label for="age-confirm-no">No</label>
+                <input type="radio" class="radio-button radio-no" name="age-confirm"><br>
 
-                <label for="dln">Driver License Number</label><br>
-                <input type="text" id="tinput" name="DLN"> <br>
+                <p>Gender:</p>
+                <label for="gender-select-male">Male</label>
+                <input type="radio" class="radio-button" name="gender-select"><br>
+                <label for="gender-select-female">Female</label>
+                <input type="radio" class="radio-button" name="gender-select"><br>
 
-                <input type="submit" value="Submit" class="button">
+                <label for="first-name">First name</label>
+                <input type="text" class="text-box" id="first-name" name="first-name">
+
+                <label for="middle-name">Middle name</label>
+                <input type="text" class="text-box" id="middle-name" name="middle-name">
+
+                <label for="last-name">Last name</label>
+                <input type="text" class="text-box" id="last-name" name="last-name">
+
+                <label for="suffix">Suffix</label>
+                <input type="text" class="text-box" id="suffix" name="suffix"><br>
+
+                <label for="driverLicense">Driver License Number</label>
+                <input type="text" class="text-box" name="DLN">
+
+                <label for="ssn">Social Security Number</label>
+                <input type="text" class="text-box" name="SSN">
+
+                <label for="date-of-birth">Date of birth</label>
+                <input type="text" class="text-box" id="date-of-birth" name="date-of-birth"><br>
+
+                <label for="address">Address</label>
+                <input type="text" class="text-box" id="address" name="address">
+
+                <label for="city">City</label>
+                <input type="text" class="text-box" id="city" name="city">
+
+                <label for="state">State</label>
+                <input type="text" class="text-box" id="state" name="state">
+
+                <label for="zipcode">Zipcode</label>
+                <input type="text" class="text-box" id="zipcode" name="zipcode"><br>
+
+                <label for="signature">Signature</label>
+                <input type="text" class="text-box" id="signature" name="signature">
+
+                <label for="sign-date">Date</label>
+                <input type="text" class="text-box" id="sign-date" name="sign-date"><br>
+
+                <!--<a href="ballot.html" class="button">Submit</a>-->
+                <button type="submit" form="register-form" value="Register" class="button" id="register-button">Register</button>
             </form>
         </div>
 
+        <div class="panel sidebar" id="rightPanel">
+            <!--Hamburger Menu-->
+		    <div class="CenterTop">
+			    <div class="open" padding="100px">
+				    <span class="cls" padding="100px"></span>
+				    <span padding="100px">
+					    <ul class="sub-menu ">
+						    <li>
+							    <a href="index.html" title="home">Home</a>
+						    </li>
+						    <li>
+							    <a href="howTo.html" title="howto">How to vote online</a>
+						    </li>
+						    <li>
+							    <a href="registerToVote.html" title="register">Register</a>
+						    </li>
+						    <li>
+							    <a href="voteLogin.php" title="vote">Vote</a>
+						    </li>
+						    <li>
+							    <a href="covidInfo.html" title="covidInfo">Covid-19</a>
+						    </li>
+					    </ul>
+				    </span>
+				    <span class="cls"></span>
+			    </div>
+		    </div>
+        </div>
 
-    </div>
-
-    <div class="panel sidebar" id="rightPanel">
-		
-		<!--Hamburger Menu-->
-		<div class="CenterTop">
-			<div class="open" padding="100px">
-				<span class="cls" padding="100px"></span>
-				<span padding="100px">
-					<ul class="sub-menu ">
-						<li>
-							<a href="index.html" title="home">Home</a>
-						</li>
-						<li>
-							<a href="howto.html" title="howto">How to vote online</a>
-						</li>
-						<li>
-							<a href="registerToVote.html" title="register">Register</a>
-						</li>
-						<li>
-							<a href="voteLogin.php" title="vote">Vote</a>
-						</li>
-						<li>
-							<a href="covidInfo.html" title="covidInfo">Covid-19</a>
-						</li>
-					</ul>
-				</span>
-				<span class="cls"></span>
-			</div>
-		</div>
-
-
-    </div>
-</body>
-
+    </body>
 </html>
-

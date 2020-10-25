@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css" />
-    <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/register.css" />
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -29,18 +29,20 @@
                 <label for="password">Password</label><br>
                 <input type="password" id="tinput" name="password"> <br>
 
+				<?php
+				session_start();
+				if(isset($_SESSION['error'])){
+					$_SESSION['error'] = null;
+					echo '<h1 class="contentPanel" style="text-align:center">Invalid login credentials!</h1><br>';
+				}
+				?>
+
                 <!--<a href="ballot.html" class="button">Submit</a>-->
                 <input type="submit" value="Submit" class="button">
                 <a href="requestNewPassword.html" class="button">Lost your password?</a>
 				
             </form>
-			<?php
-				session_start();
-				if(isset($_SESSION['error'])){
-					$_SESSION['error'] = null;
-					echo '<h1 class="contentPanel" style="text-align:center">Invalid login credentials!</h1>';
-				}
-			?>
+			
         </div>
 		
     </div>
@@ -56,7 +58,7 @@
 							<a href="index.html" title="home">Home</a>
 						</li>
 						<li>
-							<a href="howto.html" title="howto">How to vote online</a>
+							<a href="howTo.html" title="howto">How to vote online</a>
 						</li>
 						<li>
 							<a href="registerToVote.html" title="register">Register</a>

@@ -63,7 +63,7 @@
 								<a href="index.html" title="home">Home</a>
 							</li>
 							<li>
-								<a href="howto.html" title="howto">How to vote online</a>
+								<a href="howTo.html" title="howto">How to vote online</a>
 							</li>
 							<li>
 								<a href="registerToVote.html" title="register">Register</a>
