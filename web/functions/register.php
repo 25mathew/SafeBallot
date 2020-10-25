@@ -8,11 +8,12 @@
 			$result = queryHandler("INSERT INTO pii (ID,SSN,DLN) VALUES (" . $_SESSION['ID'] . ",'" . password_hash($SSN,PASSWORD_DEFAULT) . "','" . password_hash($DLN,PASSWORD_DEFAULT) . "')");
 			$result = queryHandler("INSERT INTO ballot (ID, voted) VALUES (" . $_SESSION['ID'] . ",'false')");
 			$result = queryHandler("INSERT INTO auth (ID,webcode,mailcode) VALUES (" . $_SESSION['ID'] . ",'" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "','" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "')");
-			echo $_SESSION['ID'];
+			//echo $_SESSION['ID'];
 			$_SESSION['ID'] = null;
 			echo "\nwebcode: " . $_SESSION['webcode']; 
 			echo "\nmailcode: " . $_SESSION['mailcode'];; 
 			echo "\ncongrats ya registered m8";
+			header('Location: ../IssueUsername.php');
 		}
 		else{
 			echo "you doofus you absolute bafoon you've been caught attempting identity theft please wait while we contact the police";
