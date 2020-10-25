@@ -21,6 +21,7 @@
 
             <h2 class="centerPanelH1">
 			<?php
+				session_start();
 				echo $_SESSION['vote_result'];
 			?>
 			</h2>
