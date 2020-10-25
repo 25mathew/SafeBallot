@@ -4,7 +4,8 @@
 		if(!(hashedQueryHandler($_POST['SSN'],'SSN','SELECT * FROM pii') || hashedQueryHandler($_POST['DLN'],'DLN','SELECT * FROM pii'))){ //generate codes, store pii 
 			$_SESSION['webcode'] = uniqueCodeHandler("webcode");
 			$_SESSION['mailcode'] = uniqueCodeHandler("mailcode");
-			assignID();
+			$_SESSION['ID'] = 5;
+			//assignID();
 			$result = queryHandler("INSERT INTO pii (ID,SSN,DLN) VALUES (" . $_SESSION['ID'] . ",'" . password_hash($SSN,PASSWORD_DEFAULT) . "','" . password_hash($DLN,PASSWORD_DEFAULT) . "')");
 			$result = queryHandler("INSERT INTO ballot (ID, voted) VALUES (" . $_SESSION['ID'] . ",'false')");
 			$result = queryHandler("INSERT INTO auth (ID,webcode,mailcode) VALUES (" . $_SESSION['ID'] . ",'" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "','" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "')");
