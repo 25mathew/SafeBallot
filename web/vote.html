@@ -3,34 +3,40 @@
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
         <link rel="stylesheet" href="css/core.css" />
+		<link rel="stylesheet" href="css/vote.css"/>
     </head>
     <body>
 
-        <h1>NO NO NO NO NO NONONONONONONONNONOONONONONONONNOONONONONONONONONONON.</h1>
+		<div class="panel" id="leftPanel" >
+			<a id="logo" href="index.html">Safe Ballot</a>
+			<h1>Cast your vote.</h1>
+		</div>
 
+		<div class="panel" id="contentPanel">
+			<div id="vote-ballot">
+				<h4>President</h4>
+				<div id="pres-div">
+					<div class="ballot-option rep">
+						<p>Trump/Pence</p>
+					</div>
+					<div class="ballot-option dem">
+						<p>Biden/Harris</p>
+					</div>
+				</div>
 
-        <!----
-            
-            
-            
-            
-            
-            DO NOT USE ME. I exist because github wont delete me.
-            
-            
-            
-            
-            
-            
-            -->
-        <div class="panel" id="leftPanel">
-            <a href="index.html"><h4 class="leftPanelH4">SafeBallot</h4></a>
-            <h1 class:"leftPanelH1">Vote (Fill out form)</h1>
-        </div>
+				<h4>Governor</h4>
+				<div id="gov-div">
+					<div class="ballot-option rep">
+						<p>Trump/Pence</p>
+					</div>
+					<div class="ballot-option dem">
+						<p>Biden/Harris</p>
+					</div>
+				</div>
+			</div>
 
-        <div class="panel" id="contentPanel">
-            <a href="voteConfirmation.html" name="ballotSubmission" class="button">Submit Ballot</a>
-        </div>
+			<a href="voteConfirmation.html" name="ballotSubmission" class="button">Submit Ballot</a>
+		</div>
 
         <div class="panel sidebar" id="rightPanel">
             <!--Hamburger Menu-->

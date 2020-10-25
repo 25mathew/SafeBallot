@@ -2,6 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css" />
+	<link rel="stylesheet" href="css/core.css"/>
     <link rel="stylesheet" href="css/register.css" />
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -10,6 +11,7 @@
 	<link rel="stylesheet" href="css/hamburgerMenu.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery -->
 	<script src="scripts/hamburgerMenu.js"></script>
+	<title>SafeBallot: Login</title>
 </head>
 
 <body>
@@ -22,12 +24,12 @@
         <div class="CenterContent">
             <h1 class="contentPanel" style="text-align:center">Login</h1>
 
-            <form action="functions/vote.php" method="post" style="display:block;">
+            <form action="functions/vote.php" method="post" style="display:block; text-align:center">
                 <label for="username">Username</label><br>
-                <input type="text" id="tinput" name="username"><br>
+                <input type="text" class="text-box" name="username"><br>
 
                 <label for="password">Password</label><br>
-                <input type="password" id="tinput" name="password"> <br>
+                <input type="password" class="text-box" name="password"> <br>
 
 				<?php
 				session_start();
