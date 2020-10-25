@@ -5,38 +5,6 @@
     display: flex;
 }
 
-#pres-div {
-}
-
-#gov-div {
-}
-
-#rep-div {
-}
-
-#liu-gov-div{
-}
-
-#att-div {
-}
-
-#mo-sec-st{}
-
-#mo-tres {
-}
-
-#mo-sup {
-}
-
-#mo-rep-d-128 {
-}
-
-#mo-ca-sd {
-}
-
-
-
-
 .ballot-option {
     height: 50px;
     width: 200px;
@@ -51,4 +19,24 @@
     width: 200px;
     margin: 0;
     line-height: 50px;
+}
+
+.rep {
+    border: 2px solid red;
+}
+
+.dem {
+    border: 2px solid blue;
+}
+
+.con {
+    border: 2px solid grey;
+}
+
+.green {
+    border: 2px solid green;
+}
+
+.lib {
+    border: 2px solid #E8EB55;
 }

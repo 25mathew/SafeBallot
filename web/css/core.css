@@ -220,3 +220,12 @@ article {
     display: table;
     clear: both;
 }
+
+.button{
+
+}
+
+.leftButton {
+    color: var(--black); /*text color*/
+    background-color: var(--white1);
+}
