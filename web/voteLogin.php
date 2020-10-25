@@ -34,14 +34,14 @@
                 <a href="requestNewPassword.html" class="button">Lost your password?</a>
 				
             </form>
-			<?php
-					session_start();
-					if(isset($_SESSION['error'])){
-						$_SESSION['error'] = null;
-					}
-					echo '<h1 class="contentPanel" style="text-align:center">Invalid login credentials!</h1>';
-			?>
         </div>
+		<?php
+			session_start();
+			if(isset($_SESSION['error'])){
+				$_SESSION['error'] = null;
+				echo '<h1 class="contentPanel" style="text-align:center">Invalid login credentials!</h1>';
+			}
+		?>
     </div>
 
     <div class="panel sidebar" id="rightPanel">
