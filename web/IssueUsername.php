@@ -20,14 +20,31 @@
 				<h1 class="contentPanel" style="text-align:center">Write this down:</h1>
 
 				<!--THIS IS WHERE YOU WILL INSERT THE USERNAME-->
-				<h4 id="userAccountField" name="usernameField">{username loading}</h4>
+				<?php
+					session_start();
+					if(isset($_SESSION['webcode'])){
+						echo '<h4 id="userAccountField" name="usernameField">' . $_SESSION['webcode'] . '</h4>';
+					}
+					else{
+						echo '<h4 id="userAccountField" name="usernameField">An error has occurred!</h4>';
+					}
+				?>
+				
 
 				<p class="contentPanelH4" style="text-align:center">If you lose this username, you will be unable to vote online due to election integrity. Iif you lose it, you can still vote in person.</p>
 
 				<p class="contentPanelH4" style="text-align:center"><b>Your passwords should arrive in the mail within two days.</b></p>
 
 				<!--THIS IS WHERE YOU WILL INSERT THE PASSWORD-->
-				<h4 id="userAccountField" name="passwordField">{password loading}</h4>
+				<?php
+					if(isset($_SESSION['mailcode'])){
+						echo '<h4 id="userAccountField" name="passwordField">' . $_SESSION['mailcode'] . '</h4>';
+					}
+					else{
+						echo '<h4 id="userAccountField" name="usernameField">An error has occurred!</h4>';
+					}
+				?>
+				
 				<p class="contentPanelH4" style="text-align:center">As a part of this demo, your password is shown here</p>
 
 
