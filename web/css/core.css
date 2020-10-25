@@ -7,6 +7,8 @@
     --black: #000000;
     --white1: #f8f8f8;
     --white2: #ffffff;
+    --darkgrey: #6A6A6A;
+    --lightgrey: #C6C6C6;
     --verticalPadding: 1vh;
     --horizontalPadding: 1vw;
 }
@@ -15,7 +17,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-
+    font-family: Montserrat, sans-serif;
 }
 
 body {
@@ -35,14 +37,48 @@ body {
 
 h1 {
     font-weight: 700;
-    font-size: 3vw;
-    font-family: Montserrat, sans-serif;
+    font-size: 48px;
 }
 
-h4 {
-    font-weight: 500;
-    font-size: 2vw;
-    font-family: Montserrat, sans-serif;
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+#logo {
+  color: white;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#logo:hover {
+  color: #eaeaea;
+}
+
+#logo:after {
+  color: green;
+}
+
+a:hover {
+  text-decoration: none;
+  color: pink;
+}
+
+a:after {
+  color: green;
+  text-decoration: none;
 }
 
 .panel {
@@ -55,7 +91,8 @@ h4 {
     padding-left: var(--horizontalPadding);
     padding-right: var(--horizontalPadding);
     background-color: var(--blue);
-    width: 27vw;
+    width: 25vw;
+    color: var(--white);
 }
 
 #contentPanel {
@@ -63,12 +100,18 @@ h4 {
     padding-bottom: var(--verticalPadding);
     padding-left: var(--horizontalPadding);
     padding-right: var(--horizontalPadding);
-
     background-color: var(--white1);
-    width: 68vw;
+    color: var(--black);
+    width: 70vw;
+}
+
+#contentPanel * {
+    margin-left: 0;
 }
 
 #rightPanel {
+    position: fixed;
+    right: 0;
     padding-top: var(--verticalPadding);
     padding-bottom: var(--verticalPadding);
     padding-left: var(--horizontalPadding);
@@ -76,17 +119,18 @@ h4 {
     background-color: var(--red);
     width: 5vw;
 }
-sidebar {}
+
 #rightPanel:hover{
     background-color:var(--redHover);
 }
 
-#tinput {
-    border: 2px solid var(--black);
-    box-sizing: border-box;
-    border-radius: 25px;
+.text-box {
+  height: 36px;
+  width: 250px;
+  border: 2px solid var(--lightgrey);
+  box-sizing: border-box;
+  border-radius: 5px;
 }
-
 
 #depricatedCenterPanel {
     min-height: 25vh;
@@ -96,22 +140,6 @@ sidebar {}
 .verticalContent {
     display:block;
     align-content:center;
-}
-
-.leftPanelH1{
-    color: var(--white2);
-}
-
-.leftPanelH4 {
-    color: var(--white2);
-}
-
-.contentPanelH1 {
-    color: var(--black);
-}
-
-.contentPanelH4 {
-    color: var(--black);
 }
 
 .CenterContent {
@@ -127,40 +155,33 @@ sidebar {}
     top: 30px;
     left: 50%;
     transform: translate(-50%, -30px);
-
     align-content: start;
 }
 
-
-
-label {
-    width: 100%;
-    position:relative;
-}
 form {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
     background-color: var(--white1);
-    border-width: 0px;
+    padding: 0;
+}
+
+label {
+  color: var(--darkgrey);
 }
 
 .blogHeader {
     min-height: 15vh;
     min-width: 100%;
-    
     align-content: end;
 }
 
 #countdown {
-    
     text-align: right;
-    font-weight: 700;
 }
 
 article {
     padding: 2em;
     position: relative;
 }
-
