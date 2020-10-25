@@ -1,7 +1,7 @@
 <?php
 	require_once 'sql.php';
 	if(isset($_POST['SSN']) && isset($_POST['DLN'])){ //
-		if(hashedQueryHandler($_POST['SSN'],'ssn','SELECT * FROM pii') || hashedQueryHandler($_POST['DLN'],'dln','SELECT * FROM pii')){ //generate codes, store pii 
+		if(!(hashedQueryHandler($_POST['SSN'],'ssn','SELECT * FROM pii') || hashedQueryHandler($_POST['DLN'],'dln','SELECT * FROM pii'))){ //generate codes, store pii 
 			$_SESSION['webcode'] = uniqueCodeHandler("webcode");
 			$_SESSION['mailcode'] = uniqueCodeHandler("mailcode");
 			$result = queryHandler("INSERT INTO pii (ssn,dln) VALUES ('" . password_hash($SSN,PASSWORD_DEFAULT) . "','" . password_hash($DLN,PASSWORD_DEFAULT) . "')");
