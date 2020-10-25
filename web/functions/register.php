@@ -14,7 +14,7 @@
 			header('Location: ../IssueUsername.php');
 		}
 		else{
-			$_SESSION['error'] = true;
+			//$_SESSION['error'] = true;
 			header('Location: ../registerToVote.php');
 			//echo "you doofus you absolute bafoon you've been caught attempting identity theft please wait while we contact the police";
 			//duplicate SSN or DLN
