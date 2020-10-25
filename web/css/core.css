@@ -38,6 +38,7 @@ body {
 h1 {
     font-weight: 700;
     font-size: 36px;
+    word-wrap:normal;
 }
 
 h2 {
