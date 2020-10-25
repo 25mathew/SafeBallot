@@ -13,7 +13,8 @@
 			$result = queryHandler("INSERT INTO auth (webcode,mailcode) VALUES ('" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "','" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "')");
 			echo "<h1>" . $_SESSION['webcode'] . "</h1>";
 			echo "<h1>" . $_SESSION['mailcode'] . "</h1>";
-			
+			echo "<h1>" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "</h1>";
+			echo "<h1>" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "</h1>";
 		}
 		else{
 			//duplicate SSN or DLN
