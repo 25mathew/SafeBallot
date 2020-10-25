@@ -31,7 +31,7 @@
 
                 <!--<a href="ballot.html" class="button">Submit</a>-->
                 <input type="submit" value="Submit" class="button">
-                <a href="issueNewPassword.html" class="button">Lost your password?</a>
+                <a href="requestNewPassword.html" class="button">Lost your password?</a>
             </form>
         </div>
     </div>
