@@ -23,6 +23,7 @@
 			<?php
 				session_start();
 				echo $_SESSION['vote_result'];
+				$_SESSION['vote_result'] = "You have already voted!";
 			?>
 			</h2>
         </div>
