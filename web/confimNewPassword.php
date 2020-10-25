@@ -20,7 +20,6 @@
                 <h1 class="contentPanel" style="text-align:center">Your password is on its way!</h1>
 
                 <?php
-					$_SESSION['newPass'] = "yes"; //temporary
 					if(isset($_SESSION['newPass'])){
 						echo '<p id="mailcode">' . $_SESSION['mailcode'] . '</p>';
 					}
