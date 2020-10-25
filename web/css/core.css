@@ -37,7 +37,7 @@ body {
 
 h1 {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 36px;
 }
 
 h2 {
@@ -64,8 +64,12 @@ p {
 #logo {
     color: var(--white2);
     text-decoration: none;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
+    margin: 0;
+    position: relative;
+    top: 25px;
+    left: 25px;
 }
 
 #logo:hover {
@@ -78,10 +82,7 @@ p {
 
 /*change to class*/
 #leftPanel {
-    padding-top: var(--verticalPadding);
-    padding-bottom: var(--verticalPadding);
-    padding-left: var(--horizontalPadding);
-    padding-right: var(--horizontalPadding);
+    padding: 0;
     background-color: var(--blue);
     width: 25vw;
     color: var(--white2);
@@ -89,6 +90,13 @@ p {
 
 #leftPanel * {
     color: var(--white2);
+}
+
+#leftPanel h1 {
+    width: 100%;
+    position: relative;
+    top: 275px;
+    left: 75px;
 }
 
 #contentPanel {
