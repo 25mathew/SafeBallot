@@ -19,7 +19,7 @@
         <div class="panel" id="contentPanel">
 			<div class="CenterContent">
 				<h1 class="contentPanel" style="text-align:center">Write this down:</h1>
-
+				<h1 class="contentPanelH4" style="text-align:center">USERNAME</h1>
 				<!--THIS IS WHERE YOU WILL INSERT THE USERNAME-->
 				<?php
 					session_start();
@@ -36,6 +36,7 @@
 
 				<p class="contentPanelH4" style="text-align:center"><b>Your passwords should arrive in the mail within two days.</b></p>
 
+				<h1 class="contentPanelH4" style="text-align:center">PASSWORD</h1>
 				<!--THIS IS WHERE YOU WILL INSERT THE PASSWORD-->
 				<?php
 					if(isset($_SESSION['mailcode'])){

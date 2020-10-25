@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/hamburgerMenu.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--jquery -->
     <script src="scripts/hamburgerMenu.js"></script>
+	<title>SafeBallot: Vote Confirmation</title>
 </head>
 
     <body>

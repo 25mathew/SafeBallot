@@ -1,4 +1,5 @@
-#vote-ballot {
+#vote-ballot > div{
+    display: flex;
     grid-gap: 35px;
     flex-wrap: wrap;
 }
@@ -19,6 +20,10 @@
     line-height: 50px;
 }
 
+.ballot-option p:hover {
+    cursor: pointer;
+ }
+
 .rep {
     border: 2px solid red;
 }
@@ -37,4 +42,12 @@
 
 .lib {
     border: 2px solid #E8EB55;
+}
+
+.selected {
+
+}
+
+.not-selected {
+    opacity: .25;
 }
