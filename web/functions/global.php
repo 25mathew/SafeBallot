@@ -3,6 +3,7 @@
 	function checkLoginStatus($destination){
 		if(!isset($_SESSION['logged_in'])){
 			session_destroy();
+			session_start();
 			header("Location: " . $destination);
 		}
 	}
