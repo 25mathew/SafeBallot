@@ -21,7 +21,7 @@
 
 				<!--THIS IS WHERE YOU WILL INSERT THE USERNAME-->
 				<?php
-					if(isset($_SESSION['webcode']){
+					if(isset($_SESSION['webcode'])){
 						echo '<h4 id="userAccountField" name="usernameField">' . $_SESSION['webcode'] . '</h4>';
 					}
 				?>
@@ -33,7 +33,7 @@
 
 				<!--THIS IS WHERE YOU WILL INSERT THE PASSWORD-->
 				<?php
-					if(isset($_SESSION['mailcode']){
+					if(isset($_SESSION['mailcode'])){
 						echo '<h4 id="userAccountField" name="passwordField">' . $_SESSION['mailcode'] . '</h4>';
 					}
 				?>
