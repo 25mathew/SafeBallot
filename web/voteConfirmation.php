@@ -19,7 +19,14 @@
         <div class="panel" id="contentPanel">
             <img href="images/checkmark.png"/>
 
-            <h2 class="leftPanelH1">Your vote was recieved!</h2>
+            <h2 class="centerPanelH1">
+			<?php
+				echo $_SESSION['vote_result'];
+				session_destroy();
+				session_start();
+				checkLoginStatus("../index.html");
+			?>
+			</h2>
         </div>
 
         <div class="panel sidebar" id="rightPanel">

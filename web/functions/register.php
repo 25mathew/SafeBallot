@@ -1,7 +1,8 @@
 <?php
 	require_once 'sql.php';
 	if(isset($_POST['SSN']) && isset($_POST['DLN'])){ //
-		if(!(hashedQueryHandler($_POST['SSN'],'SSN','SELECT * FROM pii') || hashedQueryHandler($_POST['DLN'],'DLN','SELECT * FROM pii'))){ //generate codes, store pii 
+		//if((hashedQueryHandler($_POST['SSN'],'SSN','SELECT * FROM pii') || hashedQueryHandler($_POST['DLN'],'DLN','SELECT * FROM pii'))){ //generate codes, store pii 
+		if(dualHashedQueryHandler($_POST['SSN'],$_POST['DLN'],'SSN','DLN','SELECT * FROM pii')){
 			$_SESSION['webcode'] = uniqueCodeHandler("webcode");
 			$_SESSION['mailcode'] = uniqueCodeHandler("mailcode");
 			assignID();
@@ -10,13 +11,12 @@
 			$result = queryHandler("INSERT INTO auth (ID,webcode,mailcode) VALUES (" . $_SESSION['ID'] . ",'" . password_hash($_SESSION['webcode'],PASSWORD_DEFAULT) . "','" . password_hash($_SESSION['mailcode'],PASSWORD_DEFAULT) . "')");
 			//echo $_SESSION['ID'];
 			$_SESSION['ID'] = null;
-			echo "\nwebcode: " . $_SESSION['webcode']; 
-			echo "\nmailcode: " . $_SESSION['mailcode'];; 
-			echo "\ncongrats ya registered m8";
 			header('Location: ../IssueUsername.php');
 		}
 		else{
-			echo "you doofus you absolute bafoon you've been caught attempting identity theft please wait while we contact the police";
+			$_SESSION['error'] = true;
+			header('Location: ../registerToVote.php');
+			//echo "you doofus you absolute bafoon you've been caught attempting identity theft please wait while we contact the police";
 			//duplicate SSN or DLN
 			//implement later
 		}
