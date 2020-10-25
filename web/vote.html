@@ -162,7 +162,10 @@
 
 			
 
-			<a href="voteConfirmation.html" name="ballotSubmission" class="button">Submit Ballot</a>
+			<form method="post" action="functions/ballotHandler.php">
+				<input type="submit" value="Submit" class="button">
+			</form>
+			<!--<a href="voteConfirmation.html" name="ballotSubmission" class="button">Submit Ballot</a>-->
 		</div>
 
 		<div class="panel sidebar" id="rightPanel">
