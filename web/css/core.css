@@ -164,3 +164,8 @@ article {
     position: relative;
 }
 
+#userAccountField {
+    text-align: center;
+    color: var(--red);
+}
+
