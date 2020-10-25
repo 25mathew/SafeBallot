@@ -22,9 +22,6 @@
             <h2 class="centerPanelH1">
 			<?php
 				echo $_SESSION['vote_result'];
-				session_destroy();
-				session_start();
-				checkLoginStatus("../index.html");
 			?>
 			</h2>
         </div>

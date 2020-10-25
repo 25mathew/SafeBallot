@@ -15,6 +15,6 @@
 	else{
 		$_SESSION['vote_result'] = "Please login to vote!";
 	}
-	echo "test";
+	//echo "test";
 	header('Location: ../voteConfirmation.php');
 ?>
