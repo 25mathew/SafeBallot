@@ -96,8 +96,12 @@ p {
 #leftPanel h1 {
     width: 100%;
     position: relative;
-    top: 275px;
+    top: 250px;
     left: 75px;
+}
+
+#leftPane h3 {
+    position: relative;
 }
 
 #contentPanel {
@@ -239,11 +243,15 @@ article {
     font-weight: bold;
     border-radius: 15px;
     border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .leftButton {
