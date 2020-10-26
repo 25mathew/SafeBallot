@@ -5,6 +5,6 @@ Our application addresses the problem of voter fraud through mail-in voting duri
 SafeBallot allows its users to vote without leaving their homes. Users first register to use the web voting system using their personally identifiable information (SSN, Drivers License, Voter ID, DOB).  After registration, the system gives them a unique encrypted web-code (username). The user then waits for a unique physical code (password) to arrive in the mail, which will take no more than two days.  Once the user has received the physical code through the mail, they will use both the web code and mail code to log in for voting.  They then will vote on a forum that is identical to the election ballot for their area.  After they have selected their candidates, they will submit the form, completed the voting process.
 
 
-# Youtube Link: 
+# Youtube Link: https://www.youtube.com/watch?v=3z5LPLVactE
 
 # Demo Link: safeballot.cantdrive55.org
